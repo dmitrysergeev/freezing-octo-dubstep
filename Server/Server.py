@@ -68,7 +68,7 @@ class MainHandler(tornado.web.RequestHandler):
         for axis in Axes:
             axis *= Ort
             reply.append([int(axis[0,0]), int(axis[0,1])])
-        reply.append([int(urllib2.urlopen(urllib2.Request('http://localhost:10040', urllib.urlencode({'V' : '{0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12} {13}'.format(Tx,Ty,Tz,Cx,Cy,Cz,Points[0][0,0],Points[0][0,1],Points[4][0,0],Points[4][0,1],Points[5][0,0],Points[5][0,1],Points[6][0,0],Points[6][0,1])}))).read()), 0])
+        reply.append([int(urllib2.urlopen(urllib2.Request('http://localhost:10031', urllib.urlencode({'V' : '{0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12} {13}'.format(Tx,Ty,Tz,Cx,Cy,Cz,Points[0][0,0],Points[0][0,1],Points[4][0,0],Points[4][0,1],Points[5][0,0],Points[5][0,1],Points[6][0,0],Points[6][0,1])}))).read()), 0])
         self.write(json_encode(reply))
 
 if __name__ == "__main__":

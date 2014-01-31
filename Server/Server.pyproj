@@ -32,6 +32,7 @@
     <Content Include="static\img\index.jpg" />
     <Content Include="static\scripts\html5slider.js" />
     <Content Include="static\scripts\jquery-1.8.3_min.js" />
+    <Content Include="static\scripts\Model.js" />
     <Content Include="static\style.css" />
   </ItemGroup>
   <ItemGroup>

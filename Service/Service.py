@@ -6,7 +6,7 @@ import os.path
 from tornado.options import define, options
 from tornado.escape  import json_encode, json_decode
 from numpy import *
-define("port", default=10040, help="run on the given port", type=int)
+define("port", default=10031, help="run on the given port", type=int)
 class Application(tornado.web.Application):
     def __init__(self):
         handlers = [
